@@ -53,23 +53,6 @@ function getSystemTheme(): ResolvedTheme {
   return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 
-let themeTransitionTimer: ReturnType<typeof setTimeout> | undefined;
-
-function enableThemeTransition() {
-  if (typeof window === "undefined") return;
-  const prefersReducedMotion = window.matchMedia?.(
-    "(prefers-reduced-motion: reduce)",
-  ).matches;
-  if (prefersReducedMotion) return;
-
-  const root = document.documentElement;
-  root.classList.add("theme-transition");
-  if (themeTransitionTimer) clearTimeout(themeTransitionTimer);
-  themeTransitionTimer = setTimeout(() => {
-    root.classList.remove("theme-transition");
-  }, 450);
-}
-
 function applyTheme(theme: Theme): ResolvedTheme {
   const resolved = theme === "system" ? getSystemTheme() : theme;
   const root = document.documentElement;
@@ -118,7 +101,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     if (!media?.addEventListener) return;
 
     const onChange = () => {
-      enableThemeTransition();
       snapshot = { ...snapshot, resolvedTheme: applyTheme("system") };
       emitChange();
     };
@@ -132,7 +114,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     } catch {
       /* storage unavailable */
     }
-    enableThemeTransition();
     snapshot = {
       theme: next,
       resolvedTheme: applyTheme(next),
