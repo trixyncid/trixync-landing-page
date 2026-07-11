@@ -1,0 +1,476 @@
+{
+  "metadata": {
+    "home": {
+      "title": "Trixync — 棉兰科技与系统工作室",
+      "description": "Trixync 为印尼棉兰及北苏门答腊的企业设计生产级软件与物联网系统。"
+    },
+    "about": {
+      "title": "关于我们 — Trixync",
+      "description": "了解 Trixync 如何作为数字工程合作伙伴，在印尼棉兰为企业提供从工作流发现到生产系统的全方位服务。"
+    },
+    "services": {
+      "title": "服务 — Trixync",
+      "description": "定制业务系统、物联网集成、平台集中化与生产基础设施 — 为棉兰及更广泛地区的真实运营而构建。"
+    },
+    "projects": {
+      "title": "项目 — Trixync",
+      "description": "Trixync 案例：KMS Connect、Gerindra Sumut、Yanks & Brits、GoHoliday DC、PGI Tower 等生产系统。"
+    },
+    "faq": {
+      "title": "常见问题 — Trixync",
+      "description": "关于与 Trixync 合作的常见问题 — 流程、时间线、物联网能力及上线后支持。"
+    },
+    "contact": {
+      "title": "联系我们 — Trixync",
+      "description": "联系位于北苏门答腊棉兰的 Trixync，告诉我们您的工作流挑战。"
+    }
+  },
+  "common": {
+    "skipToMain": "跳转到主要内容",
+    "opensInNewTab": "（在新标签页中打开）",
+    "notFound": {
+      "eyebrow": "404",
+      "title": "页面未找到",
+      "description": "您访问的页面不存在或可能已移动。",
+      "cta": "返回首页"
+    }
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于",
+    "services": "服务",
+    "projects": "项目",
+    "faq": "常见问题",
+    "contact": "联系",
+    "cta": "开始项目",
+    "language": "语言",
+    "theme": "主题",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "switchToLight": "切换到浅色模式",
+    "switchToDark": "切换到深色模式",
+    "toggleTheme": "切换主题",
+    "mobileNavigation": "移动导航"
+  },
+  "whatsapp": {
+    "label": "通过 WhatsApp 联系 Trixync",
+    "shortLabel": "WhatsApp",
+    "prefilledMessage": "您好 Trixync！我在网站上看到你们，想咨询一个项目，方便聊聊吗？"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "棉兰 · 印尼",
+      "headline": "您的工作流就是产品。",
+      "headlineHighlight": "我们构建支撑它的系统。",
+      "subheadline": "生产级软件与物联网 — 贴合团队的真实运作方式。",
+      "ctaPrimary": "联系我们",
+      "ctaSecondary": "查看案例"
+    },
+    "strengths": {
+      "title": "我们的优势",
+      "subtitle": "软件、物联网与 AI — 以实际交付的系统为支撑，而非演示文稿。",
+      "items": {
+        "aiSystems": {
+          "eyebrow": "AI · 软件 · 物联网",
+          "title": "AI 用在真正帮助工作流的地方",
+          "description": "文档提取、智能路由、预测与助手，嵌入您的运营流程 — 而非贴一个聊天机器人演示。我们将模型交付到团队已在使用的系统之中。"
+        },
+        "realWorld": {
+          "title": "连接现实世界的系统",
+          "description": "从离线优先的物联网到指纹考勤 — 我们擅长软件与物理设备的交汇点。"
+        },
+        "centralize": {
+          "title": "集中分散的数据",
+          "description": "会员系统、人力资源名册、供应商仪表板 — 我们将电子表格、WhatsApp 群组和纸质记录整合为单一系统。"
+        },
+        "production": {
+          "title": "面向生产，而非原型",
+          "description": "缓存、异步处理、RBAC、支付网关 — 决定系统能否承受真实使用的底层基础设施。"
+        },
+        "stakeholders": {
+          "title": "与实际使用者合作",
+          "description": "每个平台都源于与真实利益相关者 — 政府工作人员、人力资源团队、旅游运营商 — 的深入交流。"
+        }
+      }
+    },
+    "approach": {
+      "title": "我们解决问题的方式",
+      "subtitle": "围绕您的运营设计的流程，而非通用的开发周期。",
+      "steps": {
+        "bottleneck": {
+          "title": "找到真正的瓶颈",
+          "description": "不是假设的故障 — 而是真正拖慢业务或消耗成本的问题。"
+        },
+        "design": {
+          "title": "按现有工作方式设计",
+          "description": "采用新系统不应要求团队一夜之间改变工作方式。"
+        },
+        "build": {
+          "title": "为长远而建",
+          "description": "生产级基础设施，而非在真实负载下崩溃的演示。"
+        },
+        "support": {
+          "title": "上线后持续参与",
+          "description": "系统随业务成长而演进。我们不是交付后消失的外包商。"
+        }
+      }
+    },
+    "projects": {
+      "title": "生产中的系统",
+      "subtitle": "支撑真实运营的系统 — 而非演示文稿里的概念。",
+      "eyebrow": "精选项目",
+      "viewAll": "全部项目"
+    },
+    "location": {
+      "eyebrow": "工作方式",
+      "title": "扎根棉兰",
+      "description": "我们在北苏门答腊现场与企业协作，并与印尼各地团队合作。无论现场还是远程，都是同一个工作室。",
+      "stats": {
+        "homeBase": "工作室总部",
+        "nationwide": "全国客户",
+        "remote": "现场或远程"
+      }
+    },
+    "cta": {
+      "eyebrow": "下一步",
+      "title": "有值得改进的工作流吗？",
+      "description": "告诉我们哪些流程是手动的、重复的，或靠电子表格勉强维持。我们会定位瓶颈，并如实告诉您系统是否是答案。",
+      "button": "开始项目"
+    }
+  },
+  "about": {
+    "eyebrow": "关于",
+    "title": "系统工作室，而非普通软件公司",
+    "subtitle": "我们跨越软件与物联网架构解决方案 — 与企业合作重建运营方式。",
+    "story": {
+      "beats": {
+        "insight": {
+          "title": "我们的起点",
+          "text": "Trixync 的创立源于一个简单观察：大多数企业不需要「一个应用」，而需要重建工作流，让技术隐于幕后。"
+        },
+        "problem": {
+          "title": "问题很少在屏幕上",
+          "text": "无论是纸质考勤、电子表格中的会员管理，还是电话与日历之间的预订核对 — 瓶颈几乎总在流程，而非界面。"
+        },
+        "build": {
+          "title": "我们如何在此基础上构建",
+          "text": "我们与运营者坐在一起，映射实际发生的情况，设计既适应当前工作方式又可扩展的系统。"
+        }
+      }
+    },
+    "values": {
+      "eyebrow": "原则",
+      "title": "驱动我们工作的原则",
+      "subtitle": "三项承诺贯穿每次合作 — 从发现阶段到上线后的多年支持。",
+      "items": {
+        "production": {
+          "title": "生产优先思维",
+          "description": "我们投入缓存、访问控制、支付集成和异步处理 — 保持系统运行的幕后工作。"
+        },
+        "collaboration": {
+          "title": "利益相关者协作",
+          "description": "我们与系统的实际使用者共同构建，而非依据二手规格开发。"
+        },
+        "partnership": {
+          "title": "长期合作伙伴关系",
+          "description": "上线是里程碑，而非终点。我们随您的业务和系统共同成长而持续参与。"
+        }
+      }
+    },
+    "location": {
+      "eyebrow": "工作范围",
+      "title": "扎根棉兰",
+      "description": "总部位于北苏门答腊棉兰 — 服务全印尼客户，并开放远程协作。",
+      "stats": {
+        "homeBase": "工作室基地",
+        "nationwide": "全国客户",
+        "remote": "现场或远程"
+      },
+      "cta": {
+        "eyebrow": "与我们合作",
+        "title": "一起梳理您的工作流",
+        "description": "无论您在苏门答腊还是远程协作，我们都会从理解您的实际运营方式开始。"
+      }
+    }
+  },
+  "services": {
+    "eyebrow": "服务",
+    "title": "我们构建什么",
+    "subtitle": "端到端系统工程 — 从工作流发现到生产部署及后续支持。",
+    "categorySystems": "业务系统",
+    "categoryIot": "物联网与硬件",
+    "categoryPlatform": "平台",
+    "categoryInfrastructure": "基础设施",
+    "categories": {
+      "all": "全部服务"
+    },
+    "labels": {
+      "problem": "问题",
+      "build": "我们构建",
+      "outcome": "成果"
+    },
+    "process": {
+      "eyebrow": "合作流程",
+      "title": "我们如何合作",
+      "subtitle": "每个项目遵循相同的纪律 — 贴合您的运营，而非通用开发流程。",
+      "steps": {
+        "discover": {
+          "title": "发现工作流",
+          "description": "与一线运营人员一起，梳理实际发生的流程 — 而非假设。"
+        },
+        "design": {
+          "title": "为落地而设计",
+          "description": "围绕团队现有工作方式设计，同时为扩展留出空间。"
+        },
+        "deliver": {
+          "title": "交付生产系统",
+          "description": "从第一天起就包含权限、支付、缓存与监控 — 而非上线后补做。"
+        },
+        "support": {
+          "title": "上线后持续支持",
+          "description": "随业务增长持续演进系统，交付后不会消失。"
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "下一步",
+      "title": "不确定哪种服务适合？",
+      "description": "告诉我们哪些流程是手动的、重复的，或靠电子表格维持。我们会如实分析瓶颈并给出建议。",
+      "button": "开始沟通"
+    },
+    "items": {
+      "workflow-systems": {
+        "title": "定制业务系统",
+        "problem": "手动流程、割裂的工具和无法扩展的临时方案。",
+        "build": "数字化真实工作流的定制平台 — 预订、运营、报告和管理。",
+        "outcome": "团队真正使用的单一系统，取代分散的电子表格和临时工具。"
+      },
+      "iot-integration": {
+        "title": "物联网与硬件集成",
+        "problem": "无法触达物理世界的软件 — 考勤设备、传感器、离线环境。",
+        "build": "与指纹扫描仪、物联网硬件和边缘设备的离线优先集成。",
+        "outcome": "现场与中央系统之间的可靠数据流，即使无持续连接。"
+      },
+      "platform-centralization": {
+        "title": "平台集中化",
+        "problem": "关键数据分散在城市、部门和沟通渠道中。",
+        "build": "统一的会员、人力资源、排班和供应商/经销商平台，实时追踪。",
+        "outcome": "数千用户跨多地信赖的单一真实数据源。"
+      },
+      "production-infrastructure": {
+        "title": "生产基础设施",
+        "problem": "演示中可用但在真实流量、角色和支付流下失败的系统。",
+        "build": "RBAC、支付网关、缓存层、异步任务队列和监控。",
+        "outcome": "承受真实使用的基础设施 — 而非包装成演示的原型。"
+      }
+    }
+  },
+  "projects": {
+    "title": "项目",
+    "subtitle": "我们设计、构建并交付的系统 — 每个项目背后的 problem、approach 与 solution。",
+    "viewCaseStudy": "查看案例",
+    "filterAll": "全部",
+    "filterSoftware": "软件",
+    "filterEnterprise": "企业",
+    "filterWeb": "网站",
+    "caseStudy": {
+      "back": "全部项目",
+      "title": "问题 → 方法 → 方案",
+      "subtitle": "我们如何定位瓶颈、围绕真实工作流设计，并交付可在生产环境运行的系统。",
+      "problem": "问题",
+      "approach": "我们的方法",
+      "solution": "我们构建的内容",
+      "outcome": "成果",
+      "visitSite": "访问网站",
+      "viewCode": "查看源码"
+    },
+    "items": {
+      "kms-connect": {
+        "title": "KMS Connect App",
+        "description": "集成职位列表与移动应用的招聘平台，在一个平台中连接职位机会与申请流程。",
+        "client": "KMS · 招聘平台",
+        "problem": "职位与申请分散在多个渠道 — 求职者难以发现岗位，招聘方也难以在一处跟踪进度。",
+        "approach": "我们先梳理完整招聘流程：发布、发现、申请、状态更新，再设计统一后端与面向双方的移动体验。",
+        "solution": "Django API 驱动 Flutter 移动应用 — 求职者与招聘方共享统一的职位、申请与通知系统。",
+        "outcome": "职位与申请的单一真实数据源 — 取代电子表格、聊天与重复录入。"
+      },
+      "gerindra-sumut": {
+        "title": "Gerindra Sumut 会员系统",
+        "description": "Gerindra Sumut 会员管理系统，支持安全会员数据、搜索与报表。",
+        "client": "Gerindra · 北苏门答腊",
+        "problem": "会员记录分散在电子表格与纸质文件中 — 搜索慢、难审计、难以跨地区扩展。",
+        "approach": "与管理员共同定义注册、核验与报表流程 — 包括不能一直手工处理的文档录入。",
+        "solution": "容器化 Django 平台：结构化会员档案、搜索、报表，以及 OCR 辅助文档核验。",
+        "outcome": "安全、可搜索的会员数据与可信报表 — 取代临时文件与手工核对。"
+      },
+      "yanks-brits": {
+        "title": "Yanks & Brits 员工系统",
+        "description": "Yanks & Brits 员工管理系统，涵盖排班、薪资与员工数据。",
+        "client": "Yanks & Brits · 餐饮 hospitality",
+        "problem": "排班、考勤与薪资依赖手工名册与后台表格 — 易出错且每个发薪周期都很慢。",
+        "approach": "与运营人员了解班次如何安排、调换与结算 — 围绕这些步骤而非通用 HR 模板构建。",
+        "solution": "Django 员工平台：排班、员工档案与薪资流程集中管理，并配合角色权限。",
+        "outcome": "减少薪资错误与名册核对时间 — 员工数据与排班在同一系统中保持一致。"
+      },
+      "goholiday-dc": {
+        "title": "GoHoliday DC",
+        "description": "旅游 marketplace：旅行社销售套餐，经销商推广行程并从成交中获得佣金。",
+        "client": "GoHoliday · 旅游 marketplace",
+        "problem": "行程库存、经销商推广与佣金追踪彼此割裂 — 销售发生在聊天与表格中，缺乏共同数据源。",
+        "approach": "设计 marketplace 模型：供应商发布套餐，经销商通过可追踪链接推广，佣金按实际成交计算。",
+        "solution": "Next.js 前端 + Django 后端 — 目录、经销商面板、订单流程与自动佣金追踪一体化。",
+        "outcome": "供应商与经销商在同一系统协作 — 佣金透明，减少每次活动后的手工对账。"
+      },
+      "pgi-tower": {
+        "title": "PGI Tower",
+        "description": "PGI Tower 落地页，展示物业概况、设施与联系转化入口，采用现代响应式布局。",
+        "client": "PGI Tower · 物业",
+        "problem": "物业需要可信的线上形象 — 宣传 PDF 与过时页面难以转化咨询，也无法清晰展示设施。",
+        "approach": "按客户评估物业的方式组织内容：位置、设施、户型与清晰联系路径 — 移动优先。",
+        "solution": "基于 Next.js 与 Tailwind CSS 的营销网站 — 响应式布局、设施亮点与转化导向的联系区块。",
+        "outcome": "可在任意设备浏览的现代物业介绍 — 咨询路径清晰，而非分散的线下跟进。"
+      }
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "关于合作方式、时间线、物联网能力以及上线后支持的直接解答。",
+    "eyebrow": "FAQ",
+    "categories": {
+      "all": "全部",
+      "studio": "关于我们",
+      "process": "合作流程",
+      "technical": "技术与物联网",
+      "support": "上线之后"
+    },
+    "cta": {
+      "eyebrow": "还有疑问？",
+      "title": "直接联系我们",
+      "description": "如果您的情况无法在这些问题中找到答案，请告诉我们具体情况。我们会在一个工作日内回复。"
+    },
+    "items": {
+      "what-is-trixync": {
+        "question": "Trixync 是什么？",
+        "answer": "Trixync 是位于北苏门答腊棉兰的科技与系统工作室。我们架构定制软件和物联网解决方案，重建企业运营方式。"
+      },
+      "engagement-process": {
+        "question": "合作流程是怎样的？",
+        "answer": "我们从了解真实工作流和瓶颈开始 — 与您的团队坐在一起。然后设计、分阶段构建，并在上线后持续参与。"
+      },
+      "timeline": {
+        "question": "项目通常需要多长时间？",
+        "answer": "取决于范围。聚焦的工作流系统可能 6–10 周；含物联网的多模块平台可能 3–6 个月。发现阶段后我们会给出现实估算。"
+      },
+      "pricing": {
+        "question": "如何定价？",
+        "answer": "我们根据要解决的问题定范围，而非按工时计费。发现阶段后提供含里程碑的清晰提案。"
+      },
+      "iot-capability": {
+        "question": "能否集成硬件和物联网设备？",
+        "answer": "可以。我们已构建含指纹扫描仪、传感器和边缘设备的离线优先系统。"
+      },
+      "post-launch": {
+        "question": "上线后是否提供支持？",
+        "answer": "当然。上线是里程碑而非终点。我们提供持续维护、功能演进和基础设施监控。"
+      },
+      "industries": {
+        "question": "服务哪些行业？",
+        "answer": "我们与政府机构、人力资源团队、旅游运营商、会员组织和分销网络合作。"
+      },
+      "remote-work": {
+        "question": "是否接受远程客户？",
+        "answer": "是的。虽然我们位于棉兰，但通过结构化远程流程与印尼及国际团队合作。"
+      },
+      "medan-based": {
+        "question": "是否仅在棉兰服务？",
+        "answer": "我们总部位于棉兰，但服务全国客户。对于苏门答腊本地企业，我们提供现场发现会议。"
+      },
+      "maintenance": {
+        "question": "能否接管现有系统？",
+        "answer": "在许多情况下可以。我们会评估代码库、基础设施和运营契合度，再建议扩展、重构或重建。"
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "联系",
+    "title": "聊聊您的工作流",
+    "subtitle": "告诉我们哪些是手动的、分散的或在负载下崩溃的。我们将在一个工作日内回复。",
+    "whatsappCta": "WhatsApp 联系",
+    "channels": {
+      "eyebrow": "联系方式",
+      "title": "直接渠道",
+      "description": "想快速沟通？填写表单或直接联系我们 — 选择您方便的方式。"
+    },
+    "response": {
+      "title": "一个工作日",
+      "description": "我们会亲自阅读每条消息，并回复下一步 — 不是自动回复。"
+    },
+    "nextSteps": {
+      "eyebrow": "后续流程",
+      "title": "发送消息之后",
+      "items": {
+        "review": {
+          "title": "我们审阅您的背景",
+          "description": "项目类型、预算范围以及您描述的工作流挑战。"
+        },
+        "respond": {
+          "title": "我们清晰回复",
+          "description": "一个工作日内直接回复 — 提问、评估匹配度或建议通话。"
+        },
+        "discover": {
+          "title": "匹配则进入调研",
+          "description": "在提出范围、时间线或架构之前，我们一起梳理瓶颈。"
+        }
+      }
+    },
+    "info": {
+      "email": "邮箱",
+      "whatsapp": "WhatsApp",
+      "whatsappValue": "WhatsApp",
+      "location": "地址"
+    },
+    "form": {
+      "eyebrow": "项目咨询",
+      "title": "发送消息",
+      "description": "填写以下信息 — 我们将打开 WhatsApp 并预填您的消息。",
+      "name": "姓名",
+      "email": "电子邮箱",
+      "company": "公司（选填）",
+      "projectType": "项目类型",
+      "projectTypes": {
+        "systems": "定制业务系统",
+        "iot": "物联网 / 硬件集成",
+        "platform": "平台集中化",
+        "infrastructure": "基础设施 / 现有系统",
+        "other": "尚不确定"
+      },
+      "budgetRange": "预估预算",
+      "budgetHint": "大致范围即可 — 有助于我们推荐合适的项目范围。",
+      "budgetRanges": {
+        "under-10m": "低于 1000 万印尼盾",
+        "10-25m": "1000 万 – 2500 万印尼盾",
+        "25-50m": "2500 万 – 5000 万印尼盾",
+        "50-100m": "5000 万 – 1 亿印尼盾",
+        "above-100m": "高于 1 亿印尼盾",
+        "not-sure": "尚不确定 / 希望先沟通"
+      },
+      "message": "描述您的挑战",
+      "submit": "通过 WhatsApp 发送",
+      "success": "已打开 WhatsApp — 请确认消息并点击发送。",
+      "whatsappMessage": {
+        "intro": "你好 Trixync！来自网站的新项目咨询："
+      }
+    }
+  },
+  "footer": {
+    "tagline": "科技与系统工作室",
+    "description": "我们梳理您的运营方式 — 然后构建跨越软件与物联网的生产级系统。",
+    "ctaEyebrow": "下一步",
+    "ctaTitle": "有值得改进的工作流吗？",
+    "ctaDescription": "告诉我们哪些流程是手动的、重复的，或靠电子表格勉强维持。我们会定位瓶颈，并如实告诉您系统是否是答案。",
+    "navigate": "导航",
+    "connect": "联系",
+    "rights": "版权所有。",
+    "location": "印尼北苏门答腊棉兰"
+  }
+}
