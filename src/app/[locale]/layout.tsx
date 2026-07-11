@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Poppins, Kumbh_Sans } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
@@ -95,6 +96,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           </ThemeProvider>
           </div>
         </div>
+        <Analytics />
       </body>
     </html>
   );
