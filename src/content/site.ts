@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Trixync",
   domain: "trixync.id",
   tagline: "Technology & Systems Studio",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://trixync.id",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.trixync.id",
   email: "hello@trixync.id",
   /** Used for WhatsApp links and structured data only — not shown in the UI */
   telephone: "+62 882 6130 6403",

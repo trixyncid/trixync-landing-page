@@ -34,11 +34,12 @@ export function HeroSection() {
   const prefix = `/${locale}`;
   const reducedMotion = useReducedMotion();
   const mobileLite = useMobileLite();
-  // Phones: CSS backdrop only — WebGL + 49 SVG beam loops fight the hamburger
-  // and scroll reveals for the GPU. Desktop keeps the full treatment.
+  // The 3D hero renders on mobile too (at a lower pixel ratio). Only the
+  // 49-path SVG beams stay desktop-only — they animate on the main thread and
+  // are what actually starved the hamburger / scroll reveals on phones.
   const effectsReady = useDeferredMount({
     timeout: 3000,
-    disabled: reducedMotion === true || mobileLite,
+    disabled: reducedMotion === true,
   });
 
   return (
@@ -47,7 +48,9 @@ export function HeroSection() {
         <HeroBackdrop />
         {effectsReady && (
           <>
-            <BackgroundBeams className="absolute inset-0 h-full w-full opacity-25 dark:opacity-40" />
+            {!mobileLite && (
+              <BackgroundBeams className="absolute inset-0 h-full w-full opacity-25 dark:opacity-40" />
+            )}
             <HeroScene />
           </>
         )}

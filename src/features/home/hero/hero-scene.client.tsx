@@ -5,6 +5,7 @@ import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import { inertCanvasEvents } from "@/lib/r3f-inert-events";
 import { useRenderActive } from "@/hooks/use-render-active";
+import { useMobileLite } from "@/hooks/use-mobile-lite";
 
 function createNetworkGeometry() {
   const nodeCount = 36;
@@ -76,6 +77,7 @@ function NetworkMesh() {
 
 export function HeroScene() {
   const { ref, active } = useRenderActive<HTMLDivElement>();
+  const mobileLite = useMobileLite();
 
   return (
     <div
@@ -89,7 +91,7 @@ export function HeroScene() {
       <Canvas
         className="h-full w-full"
         camera={{ position: [0, 0.5, 8], fov: 58 }}
-        dpr={[1, 1.5]}
+        dpr={mobileLite ? 1 : [1, 1.5]}
         gl={{ antialias: false, alpha: true, powerPreference: "high-performance" }}
         frameloop={active ? "always" : "never"}
         events={inertCanvasEvents}

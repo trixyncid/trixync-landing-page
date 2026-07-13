@@ -40,7 +40,7 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://trixync.id"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.trixync.id"),
   icons: {
     icon: [
       { url: "/brand/logo-icon.svg", media: "(prefers-color-scheme: light)" },

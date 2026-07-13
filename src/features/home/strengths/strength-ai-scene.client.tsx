@@ -5,6 +5,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { inertCanvasEvents } from "@/lib/r3f-inert-events";
 import { useRenderActive } from "@/hooks/use-render-active";
+import { useMobileLite } from "@/hooks/use-mobile-lite";
 
 type MouseOffset = { x: number; y: number };
 
@@ -206,6 +207,7 @@ type StrengthAiSceneProps = {
 
 export function StrengthAiScene({ mouse }: StrengthAiSceneProps) {
   const { ref, active } = useRenderActive<HTMLDivElement>();
+  const mobileLite = useMobileLite();
 
   return (
     <div
@@ -217,7 +219,7 @@ export function StrengthAiScene({ mouse }: StrengthAiSceneProps) {
       <Canvas
         className="h-full w-full"
         camera={{ position: [0, 0.25, 5.2], fov: 48 }}
-        dpr={[1, 1.25]}
+        dpr={mobileLite ? 1 : [1, 1.25]}
         gl={{ antialias: false, alpha: true, powerPreference: "high-performance" }}
         frameloop={active ? "always" : "never"}
         events={inertCanvasEvents}
