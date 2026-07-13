@@ -55,12 +55,24 @@ export async function SiteFooter() {
       <Container className="relative py-14 md:py-16">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
-            <Logo variant="full" size="md" className="mb-5" />
-            <p className="font-heading text-base font-medium text-foreground">{t("tagline")}</p>
-            <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted-foreground">
+            <Link
+              href={prefix}
+              aria-label={siteConfig.name}
+              className="inline-flex items-center gap-3.5"
+            >
+              <Logo variant="icon" size="lg" />
+              <span className="h-9 w-px bg-border/70" aria-hidden />
+              <span className="flex flex-col gap-1.5">
+                <Logo variant="text" size="sm" />
+                <span className="font-heading text-[0.625rem] font-semibold uppercase tracking-[0.32em] text-brand-light">
+                  {t("tagline")}
+                </span>
+              </span>
+            </Link>
+            <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
               {t("description")}
             </p>
-            <p className="mt-5 inline-flex items-center gap-2 text-sm text-muted-foreground/90">
+            <p className="mt-5 inline-flex items-center gap-2 text-sm text-muted-foreground">
               <MapPin className="h-4 w-4 shrink-0 text-brand-light" />
               {t("location")}
             </p>
@@ -134,11 +146,13 @@ export async function SiteFooter() {
 
       <div className="section-divider mx-auto max-w-4xl opacity-40" aria-hidden />
 
-      <Container className="relative flex flex-col gap-2 py-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+      <Container className="relative flex flex-col gap-3 py-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
         <p>
           © {year} {siteConfig.name}. {t("rights")}
         </p>
-        <p>{siteConfig.domain}</p>
+        <p className="font-heading text-xs font-semibold uppercase tracking-[0.28em] text-muted-foreground">
+          {siteConfig.domain}
+        </p>
       </Container>
     </footer>
   );
