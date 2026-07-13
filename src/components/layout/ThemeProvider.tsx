@@ -5,10 +5,15 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useSyncExternalStore,
   type ReactNode,
 } from "react";
+import { usePathname } from "next/navigation";
+
+const useIsomorphicLayoutEffect =
+  typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
 type Theme = "light" | "dark" | "system";
 type ResolvedTheme = "light" | "dark";
@@ -64,21 +69,17 @@ function applyTheme(theme: Theme): ResolvedTheme {
 
 function readStoredTheme(): Theme {
   try {
-    return (localStorage.getItem("theme") as Theme | null) ?? "dark";
+    return (localStorage.getItem("theme") as Theme | null) ?? "system";
   } catch {
-    return "dark";
+    return "system";
   }
 }
 
-function readResolvedFromDom(): ResolvedTheme {
-  return document.documentElement.classList.contains("light") ? "light" : "dark";
-}
-
-function syncSnapshotFromDom() {
+function reapplyStoredTheme() {
   const stored = readStoredTheme();
   snapshot = {
     theme: stored,
-    resolvedTheme: readResolvedFromDom(),
+    resolvedTheme: applyTheme(stored),
   };
   emitChange();
 }
@@ -89,10 +90,14 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     getSnapshot,
     getServerSnapshot,
   );
+  const pathname = usePathname();
 
-  useEffect(() => {
-    syncSnapshotFromDom();
-  }, []);
+  // Re-assert the stored theme on every navigation. A locale switch re-renders
+  // the root layout, which resets the hard-coded class on <html> — this runs in
+  // a layout effect (before paint) so the correct theme is restored without a flash.
+  useIsomorphicLayoutEffect(() => {
+    reapplyStoredTheme();
+  }, [pathname]);
 
   useEffect(() => {
     if (theme !== "system") return;

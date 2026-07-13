@@ -1,6 +1,6 @@
 "use client";
 
-const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem("theme")||"dark";var r=t;if(t==="system"){r=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}var e=document.documentElement;e.classList.remove("light","dark");e.classList.add(r);e.style.colorScheme=r}catch(n){}})();`;
+const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem("theme")||"system";var r=t;if(t==="system"){r=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}var e=document.documentElement;e.classList.remove("light","dark");e.classList.add(r);e.style.colorScheme=r}catch(n){}})();`;
 
 /**
  * Blocking theme init for SSR only.

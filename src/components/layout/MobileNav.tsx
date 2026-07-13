@@ -86,7 +86,7 @@ export function MobileNav({
             aria-modal="true"
             aria-label={tNav("mobileNavigation")}
             aria-labelledby="mobile-navigation-title"
-            className="absolute inset-x-0 top-0 flex max-h-[100dvh] min-h-[100dvh] flex-col overflow-y-auto bg-background pt-16"
+            className="absolute inset-x-0 top-0 flex max-h-[100dvh] min-h-[100dvh] flex-col overflow-y-auto bg-background pt-20"
             initial={{ y: "-100%" }}
             animate={{ y: 0 }}
             exit={{ y: "-100%" }}

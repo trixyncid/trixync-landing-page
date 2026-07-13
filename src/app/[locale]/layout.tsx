@@ -9,6 +9,7 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { FloatingWhatsApp } from "@/components/shared/floating-whatsapp";
 import { PageAmbientGlow } from "@/components/shared/page-ambient-glow";
+import { ThreeDeprecationFilter } from "@/components/shared/three-deprecation-filter";
 import { JsonLd } from "@/components/shared/JsonLd";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import { htmlLangMap, routing, type Locale } from "@/i18n/routing";
@@ -67,12 +68,14 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html
       lang={htmlLangMap[locale as Locale]}
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
       className={`${poppins.variable} ${kumbhSans.variable} h-full dark`}
     >
       <head>
         <ThemeScript />
       </head>
       <body className="flex min-h-full flex-col font-sans antialiased">
+        <ThreeDeprecationFilter />
         <div className="relative isolate flex min-h-full flex-col">
           <PageAmbientGlow />
           <div className="relative z-10 flex min-h-full flex-col">
@@ -86,7 +89,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <ThemeProvider>
             <NextIntlClientProvider messages={messages}>
               <SiteHeader />
-              <main id="main-content" tabIndex={-1} className="relative flex-1 pt-16 outline-none">
+              <main id="main-content" tabIndex={-1} className="relative flex-1 pt-20 outline-none">
                 {children}
               </main>
               <SiteFooter />

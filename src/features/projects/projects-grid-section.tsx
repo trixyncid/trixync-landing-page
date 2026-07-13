@@ -58,7 +58,7 @@ export function ProjectsGridSection() {
         </div>
       </ScrollReveal>
 
-      <ScrollStagger className="grid gap-8 md:grid-cols-2">
+      <ScrollStagger key={active} className="grid gap-8 md:grid-cols-2">
         {filtered.map((project) => (
           <ScrollStaggerItem key={project.id}>
             <ProjectShowcaseCard

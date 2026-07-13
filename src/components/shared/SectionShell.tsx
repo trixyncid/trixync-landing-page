@@ -20,7 +20,7 @@ export function SectionShell({
       id={id}
       className={cn(
         "relative py-14 md:py-20",
-        id && "scroll-mt-16",
+        id && "scroll-mt-20",
         variant === "brand" && "section-glow",
         className,
       )}

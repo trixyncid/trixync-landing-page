@@ -60,8 +60,8 @@
   "home": {
     "hero": {
       "eyebrow": "Medan · Indonesia",
-      "headline": "Your workflow is the product.",
-      "headlineHighlight": "We build what runs it.",
+      "headline": "Your operations,",
+      "headlineHighlight": "Built in Sync.",
       "subheadline": "Production software and IoT — mapped to how your team actually works.",
       "ctaPrimary": "Talk to us",
       "ctaSecondary": "See our work"
@@ -324,11 +324,65 @@
       "pgi-tower": {
         "title": "PGI Tower",
         "description": "Landing page website for PGI Tower that presents the property profile, facilities, and contact conversion points with a modern responsive layout.",
-        "client": "PGI Tower · Property",
+        "client": "PT Property Group Imperium · Property",
         "problem": "The property needed a credible web presence — brochure PDFs and outdated pages weren't converting inquiries or presenting facilities clearly.",
         "approach": "We structured the site around how prospects evaluate property: location, facilities, unit types, and clear contact paths — mobile-first.",
         "solution": "A fast Next.js marketing site with Tailwind CSS — responsive layouts, facility highlights, and conversion-focused contact sections.",
         "outcome": "A modern property profile prospects can browse on any device — with clear paths to inquiry instead of scattered offline follow-up."
+      },
+      "sejahtera-bersama-erp": {
+        "title": "Sejahtera Bersama ERP",
+        "description": "End-to-end ERP for UD Sejahtera Bersama — inventory, attendance, payroll, purchasing, POS, and production workflow in one system.",
+        "client": "UD Sejahtera Bersama · Distribution",
+        "problem": "Stock, purchasing, attendance, payroll, and production lived in separate spreadsheets — no live stock health, no reliable HPP (cost of goods), and constant manual reconciliation.",
+        "approach": "We mapped the full operational loop — from purchase orders and goods receiving to production, sales, and payroll — then designed one ERP where each module feeds the next instead of duplicate data entry.",
+        "solution": "A Django ERP covering inventory management, attendance, payroll, purchase orders, goods buying, automated HPP calculation, POS, and a production workflow — with a live operations dashboard.",
+        "outcome": "One source of truth for stock, cost, and staff — real-time stock health and accurate HPP replacing scattered spreadsheets."
+      },
+      "itnb-portal": {
+        "title": "IT&B Campus Portal",
+        "description": "Institutional portal for Institut Bisnis IT&B connecting students, lecturers, and alumni — digital ID cards, GPA, announcements, and webinar registration.",
+        "client": "Institut Bisnis IT&B · Education",
+        "problem": "Student records, campus news, GPA lookups, and event sign-ups were spread across manual processes — no single place for students, lecturers, and alumni to access what they needed.",
+        "approach": "We designed role-based journeys for students, lecturers, and alumni, then centralized the records and communications each group depends on into one portal.",
+        "solution": "A Django portal issuing digital ID cards, showing GPA and academic records, publishing campus announcements, and running smart webinar registration for students, lecturers, and alumni.",
+        "outcome": "One campus portal for identity, grades, news, and events — replacing scattered manual lookups across the institution."
+      },
+      "chinergy-shenindo": {
+        "title": "CV Chinergy Shenindo",
+        "description": "Corporate landing page for an industrial solutions company — spare parts, machinery repair, fabrication, and equipment rental across Indonesia.",
+        "client": "CV Chinergy Shenindo · Industrial",
+        "problem": "An established industrial supplier had no credible web presence to showcase its service lines, catalog depth, and nationwide reach to prospective plantation and industrial clients.",
+        "approach": "We structured the site around how industrial buyers evaluate a supplier — services, spare parts catalog, partner network, and clear quotation paths — in both English and Indonesian.",
+        "solution": "A multilingual Next.js marketing site with Tailwind CSS presenting fabrication, repair, and spare parts offerings, partner regions, and conversion-focused contact and quotation sections.",
+        "outcome": "A trusted online profile that presents Chinergy's full industrial capability and drives quotation requests instead of offline-only outreach."
+      },
+      "citikopi": {
+        "title": "Citikopi Mandailing Beans",
+        "description": "Multilingual brand and export landing page for a Mandailing coffee and Indonesian specialty producer — from single-origin beans to global markets.",
+        "client": "Citikopi · Coffee export",
+        "problem": "A specialty coffee and spice exporter needed to present its Mandailing heritage, ethical sourcing story, and product range credibly to international buyers.",
+        "approach": "We built the narrative around origin and craft — highlands, single-origin beans, sustainable sourcing — with clear paths to products and export partnership inquiries.",
+        "solution": "A polished multilingual Next.js site with Tailwind CSS showcasing products, sourcing values, brand story, and partner/export contact points.",
+        "outcome": "An export-ready brand presence that tells Citikopi's origin story and opens conversations with global buyers."
+      },
+      "genba-solusindo": {
+        "title": "PT Genba Inti Solusindo",
+        "description": "Landing page for an AC & HVAC contractor in Medan — product lineup, services, and lead capture for commercial and residential clients.",
+        "client": "PT Genba Inti Solusindo · HVAC",
+        "problem": "An AC and HVAC contractor needed a professional web presence to present its product lineup, installation and maintenance services, and capture inquiries across Sumatra.",
+        "approach": "We organized the site around what buyers look for — AC types, services, and trust signals — with clear contact and inquiry paths.",
+        "solution": "A responsive Next.js landing page with Tailwind CSS presenting the AC product lineup, HVAC services, company profile, and conversion-focused contact sections.",
+        "outcome": "A credible contractor profile that showcases the product range and turns visitors into service inquiries."
+      },
+      "skyview-setiabudi": {
+        "title": "Skyview Setiabudi Apartment",
+        "description": "Property landing page for a modern apartment in central Medan — facilities, unit types, pricing, and booking conversion.",
+        "client": "Skyview Setiabudi · Property",
+        "problem": "A modern apartment development needed a compelling web presence to present its facilities, unit types, and pricing, and to funnel prospects toward official booking.",
+        "approach": "We structured the site the way buyers evaluate a residence — location, facilities, unit types with pricing, and gallery — with clear, trusted booking paths.",
+        "solution": "A responsive Next.js site with Tailwind CSS highlighting premium facilities, studio-to-2BR unit types with pricing, photo gallery, and official contact and booking sections.",
+        "outcome": "A polished property profile that presents units and facilities clearly and channels inquiries to official booking rather than scattered offline follow-up."
       }
     }
   },
@@ -463,7 +517,7 @@
     }
   },
   "footer": {
-    "tagline": "Technology & Systems Studio",
+    "tagline": "Built in Sync",
     "description": "We map how your business runs — then build production systems across software and IoT.",
     "ctaEyebrow": "Next step",
     "ctaTitle": "Have a workflow worth fixing?",

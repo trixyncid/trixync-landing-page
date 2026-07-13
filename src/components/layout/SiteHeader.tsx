@@ -70,10 +70,10 @@ export function SiteHeader() {
           />
         )}
 
-        <div className="relative z-10 mx-auto grid h-16 max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-4 px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 mx-auto grid h-20 max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-4 px-4 sm:px-6 lg:px-8">
           <Link href={prefix} className="relative z-[70] flex shrink-0 items-center">
-            <Logo variant="icon" size="sm" className="sm:hidden" priority />
-            <Logo variant="text" size="md" className="hidden sm:inline-flex" priority />
+            <Logo variant="text" size="xs" className="sm:hidden" priority />
+            <Logo variant="text" size="sm" className="hidden sm:inline-flex" priority />
           </Link>
 
           <nav
@@ -120,7 +120,7 @@ export function SiteHeader() {
           <button
             ref={menuButtonRef}
             type="button"
-            className="relative z-[70] col-start-3 flex h-10 w-10 items-center justify-center justify-self-end text-foreground transition-colors hover:text-brand lg:hidden"
+            className="relative z-[70] col-start-3 -mr-2.5 flex h-10 w-10 items-center justify-center justify-self-end text-foreground transition-colors hover:text-brand lg:hidden"
             aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
             aria-expanded={mobileOpen}
             aria-controls="mobile-navigation"

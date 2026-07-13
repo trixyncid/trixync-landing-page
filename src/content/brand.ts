@@ -22,6 +22,11 @@ export const brandAssets = {
 } as const;
 
 export const logoSizes = {
+  xs: {
+    full: "h-7",
+    text: "h-4",
+    icon: "h-6 w-6",
+  },
   sm: {
     full: "h-8",
     text: "h-5",

@@ -55,7 +55,7 @@
 
 /* Light theme */
 :root {
-  --site-header-height: 4rem;
+  --site-header-height: 5rem;
   --background: #f8f9fc;
   --foreground: #0c0e14;
   --card: #ffffff;

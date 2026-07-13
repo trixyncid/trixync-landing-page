@@ -38,7 +38,7 @@ export function HeroSection() {
   });
 
   return (
-    <section className="relative -mt-16 min-h-[85vh] overflow-visible pb-20 pt-[calc(var(--site-header-height)+3rem)] md:pb-28 md:pt-[calc(var(--site-header-height)+4rem)]">
+    <section className="relative -mt-20 min-h-[85vh] overflow-visible pb-20 pt-[calc(var(--site-header-height)+3rem)] md:pb-28 md:pt-[calc(var(--site-header-height)+4rem)]">
       <div className="pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_bottom,black_0%,black_55%,transparent_92%)]">
         <HeroBackdrop />
         {effectsReady && (
