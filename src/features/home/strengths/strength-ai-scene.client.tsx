@@ -4,6 +4,7 @@ import { useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { inertCanvasEvents } from "@/lib/r3f-inert-events";
+import { useRenderActive } from "@/hooks/use-render-active";
 
 type MouseOffset = { x: number; y: number };
 
@@ -204,13 +205,16 @@ type StrengthAiSceneProps = {
 };
 
 export function StrengthAiScene({ mouse }: StrengthAiSceneProps) {
+  const { ref, active } = useRenderActive<HTMLDivElement>();
+
   return (
-    <div className="absolute inset-0">
+    <div ref={ref} className="absolute inset-0">
       <Canvas
         className="h-full w-full"
         camera={{ position: [0, 0.25, 5.2], fov: 48 }}
         dpr={[1, 1.5]}
         gl={{ antialias: true, alpha: true }}
+        frameloop={active ? "always" : "never"}
         events={inertCanvasEvents}
         style={{ background: "transparent" }}
       >

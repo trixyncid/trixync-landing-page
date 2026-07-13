@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { usePathname } from "@/i18n/routing";
@@ -12,6 +12,7 @@ import { Logo } from "./Logo";
 import { navLinks } from "@/content/site";
 import { type Locale } from "@/i18n/routing";
 import { useScrolled } from "@/hooks/use-scrolled";
+import { setBackgroundPaused } from "@/lib/background-activity";
 import { cn } from "@/lib/utils";
 
 const navIcons: Record<string, React.ReactNode> = {
@@ -30,6 +31,11 @@ export function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const scrolled = useScrolled(12);
+
+  useEffect(() => {
+    setBackgroundPaused(mobileOpen);
+    return () => setBackgroundPaused(false);
+  }, [mobileOpen]);
 
   const prefix = `/${locale}`;
   const items = navLinks.map((link) => ({

@@ -4,6 +4,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import { inertCanvasEvents } from "@/lib/r3f-inert-events";
+import { useRenderActive } from "@/hooks/use-render-active";
 
 function createNetworkGeometry() {
   const nodeCount = 56;
@@ -74,13 +75,19 @@ function NetworkMesh() {
 }
 
 export function HeroScene() {
+  const { ref, active } = useRenderActive<HTMLDivElement>();
+
   return (
-    <div className="absolute inset-0 h-full w-full [mask-image:linear-gradient(to_right,black_20%,black_85%)]">
+    <div
+      ref={ref}
+      className="absolute inset-0 h-full w-full [mask-image:linear-gradient(to_right,black_20%,black_85%)]"
+    >
       <Canvas
         className="h-full w-full"
         camera={{ position: [0, 0.5, 8], fov: 58 }}
         dpr={[1, 1.75]}
         gl={{ antialias: true, alpha: true }}
+        frameloop={active ? "always" : "never"}
         events={inertCanvasEvents}
         style={{ background: "transparent", width: "100%", height: "100%" }}
       >
