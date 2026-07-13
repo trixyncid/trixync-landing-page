@@ -32,10 +32,16 @@ export function SiteHeader() {
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const scrolled = useScrolled(12);
 
+  // Pause synchronously on click so WebGL/beams freeze *before* the menu
+  // paints — useEffect would be one frame too late and cause the open jank.
+  function setMenuOpen(next: boolean) {
+    setBackgroundPaused(next);
+    setMobileOpen(next);
+  }
+
   useEffect(() => {
-    setBackgroundPaused(mobileOpen);
     return () => setBackgroundPaused(false);
-  }, [mobileOpen]);
+  }, []);
 
   const prefix = `/${locale}`;
   const items = navLinks.map((link) => ({
@@ -130,7 +136,7 @@ export function SiteHeader() {
             aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
             aria-expanded={mobileOpen}
             aria-controls="mobile-navigation"
-            onClick={() => setMobileOpen((value) => !value)}
+            onClick={() => setMenuOpen(!mobileOpen)}
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -140,7 +146,7 @@ export function SiteHeader() {
       <MobileNav
         open={mobileOpen}
         onClose={() => {
-          setMobileOpen(false);
+          setMenuOpen(false);
           menuButtonRef.current?.focus();
         }}
         items={items}

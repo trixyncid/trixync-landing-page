@@ -66,6 +66,8 @@ export const BackgroundBeams = React.memo(
           "absolute inset-0 flex h-full w-full items-center justify-center [mask-repeat:no-repeat] [mask-size:40px]",
           className,
         )}
+        style={{ visibility: active ? "visible" : "hidden" }}
+        aria-hidden={!active}
       >
         <svg
           className="pointer-events-none absolute z-0 h-full w-full"

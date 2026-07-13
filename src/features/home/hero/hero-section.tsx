@@ -7,6 +7,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { HeroHeadline } from "./hero-headline";
 import { HeroReveal } from "@/components/shared/scroll-reveal";
 import { useDeferredMount } from "@/hooks/use-deferred-mount";
+import { useMobileLite } from "@/hooks/use-mobile-lite";
 import { type Locale } from "@/i18n/routing";
 
 const BackgroundBeams = dynamic(
@@ -32,9 +33,12 @@ export function HeroSection() {
   const locale = useLocale() as Locale;
   const prefix = `/${locale}`;
   const reducedMotion = useReducedMotion();
+  const mobileLite = useMobileLite();
+  // Phones: CSS backdrop only — WebGL + 49 SVG beam loops fight the hamburger
+  // and scroll reveals for the GPU. Desktop keeps the full treatment.
   const effectsReady = useDeferredMount({
     timeout: 3000,
-    disabled: reducedMotion === true,
+    disabled: reducedMotion === true || mobileLite,
   });
 
   return (
@@ -51,7 +55,7 @@ export function HeroSection() {
           className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/20 to-transparent [mask-image:linear-gradient(to_bottom,transparent_0%,transparent_22%,black_44%,black_100%)] dark:from-background/75 dark:via-background/25"
           aria-hidden
         />
-        <div className="grain-overlay absolute inset-0 opacity-40" />
+        <div className="grain-overlay absolute inset-0 opacity-40 max-md:hidden" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

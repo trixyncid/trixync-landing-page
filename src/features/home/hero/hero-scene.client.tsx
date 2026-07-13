@@ -7,7 +7,7 @@ import { inertCanvasEvents } from "@/lib/r3f-inert-events";
 import { useRenderActive } from "@/hooks/use-render-active";
 
 function createNetworkGeometry() {
-  const nodeCount = 56;
+  const nodeCount = 36;
   const positions: number[] = [];
   const nodes: THREE.Vector3[] = [];
 
@@ -81,12 +81,16 @@ export function HeroScene() {
     <div
       ref={ref}
       className="absolute inset-0 h-full w-full [mask-image:linear-gradient(to_right,black_20%,black_85%)]"
+      // Drop the canvas from the compositor when frozen — frameloop="never"
+      // alone still leaves a promoted WebGL layer that fights overlay UI.
+      style={{ visibility: active ? "visible" : "hidden" }}
+      aria-hidden={!active}
     >
       <Canvas
         className="h-full w-full"
         camera={{ position: [0, 0.5, 8], fov: 58 }}
-        dpr={[1, 1.75]}
-        gl={{ antialias: true, alpha: true }}
+        dpr={[1, 1.5]}
+        gl={{ antialias: false, alpha: true, powerPreference: "high-performance" }}
         frameloop={active ? "always" : "never"}
         events={inertCanvasEvents}
         style={{ background: "transparent", width: "100%", height: "100%" }}

@@ -2,9 +2,10 @@
 
 import dynamic from "next/dynamic";
 import { useState } from "react";
-import { motion, useReducedMotion } from "motion/react";
+import { useReducedMotion } from "motion/react";
 import { Spotlight } from "@/components/ui/spotlight";
 import { useHeavyEffects } from "@/hooks/use-heavy-effects";
+import { useMobileLite } from "@/hooks/use-mobile-lite";
 import { cn } from "@/lib/utils";
 
 const StrengthAiScene = dynamic(
@@ -26,56 +27,57 @@ export function StrengthAiFeature({
   className,
 }: StrengthAiFeatureProps) {
   const reduced = useReducedMotion();
+  const mobileLite = useMobileLite();
   const { ref, ready: sceneReady } = useHeavyEffects({ idleTimeout: 2000 });
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const [hovering, setHovering] = useState(false);
+  const interactive = !reduced && !mobileLite;
 
   const handleMouseMove = (event: React.MouseEvent<HTMLElement>) => {
+    if (!interactive) return;
     const rect = event.currentTarget.getBoundingClientRect();
     const px = (event.clientX - rect.left) / rect.width;
     const py = (event.clientY - rect.top) / rect.height;
     setMouse({ x: (px - 0.5) * 2, y: (py - 0.5) * 2 });
-
-    if (!reduced) {
-      setTilt({
-        x: (event.clientX - (rect.left + rect.width / 2)) / 28,
-        y: (event.clientY - (rect.top + rect.height / 2)) / 28,
-      });
-    }
+    setTilt({
+      x: (event.clientX - (rect.left + rect.width / 2)) / 28,
+      y: (event.clientY - (rect.top + rect.height / 2)) / 28,
+    });
   };
 
   return (
-    <motion.article
+    <article
       onMouseMove={handleMouseMove}
-      onMouseEnter={() => setHovering(true)}
+      onMouseEnter={() => interactive && setHovering(true)}
       onMouseLeave={() => {
+        if (!interactive) return;
         setHovering(false);
         setMouse({ x: 0, y: 0 });
         setTilt({ x: 0, y: 0 });
       }}
       style={
-        reduced
-          ? undefined
-          : {
-              transform: hovering
-                ? `translate3d(${tilt.x}px, ${tilt.y}px, 0)`
-                : undefined,
+        interactive && hovering
+          ? {
+              transform: `translate3d(${tilt.x}px, ${tilt.y}px, 0)`,
               transition: "transform 0.15s ease-out",
             }
+          : undefined
       }
       className={cn(
         "group relative flex h-full min-h-[22rem] flex-col overflow-hidden rounded-2xl border border-border/50 bg-card/20 md:min-h-0",
         className,
       )}
     >
-      <Spotlight
-        className={cn(
-          "-top-24 left-0 md:-top-20 md:left-16",
-          hovering ? "opacity-100" : "opacity-0",
-        )}
-        fill="#3866F2"
-      />
+      {interactive && (
+        <Spotlight
+          className={cn(
+            "-top-24 left-0 md:-top-20 md:left-16",
+            hovering ? "opacity-100" : "opacity-0",
+          )}
+          fill="#3866F2"
+        />
+      )}
 
       <div
         ref={ref}
@@ -103,6 +105,6 @@ export function StrengthAiFeature({
           {description}
         </p>
       </div>
-    </motion.article>
+    </article>
   );
 }

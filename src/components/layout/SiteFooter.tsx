@@ -134,11 +134,11 @@ export async function SiteFooter() {
 
       <div className="section-divider mx-auto max-w-4xl opacity-40" aria-hidden />
 
-      <Container className="relative flex flex-col gap-2 py-6 text-sm text-muted-foreground/75 sm:flex-row sm:items-center sm:justify-between">
+      <Container className="relative flex flex-col gap-2 py-6 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
         <p>
           © {year} {siteConfig.name}. {t("rights")}
         </p>
-        <p className="text-muted-foreground/60">{siteConfig.domain}</p>
+        <p>{siteConfig.domain}</p>
       </Container>
     </footer>
   );

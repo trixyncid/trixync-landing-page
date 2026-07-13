@@ -296,6 +296,38 @@
     background: var(--background);
     border-bottom: 1px solid var(--header-border);
   }
+
+  /* Lightweight mobile menu — transform/opacity only, no JS springs */
+  .mobile-nav-root {
+    animation: mobile-nav-fade 160ms ease-out both;
+  }
+  .mobile-nav-backdrop {
+    animation: mobile-nav-fade 160ms ease-out both;
+  }
+  .mobile-nav-panel {
+    animation: mobile-nav-slide 220ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    will-change: transform;
+  }
+}
+
+@keyframes mobile-nav-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mobile-nav-slide {
+  from {
+    transform: translate3d(0, -12%, 0);
+    opacity: 0.96;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
 @keyframes spotlight {

@@ -208,12 +208,17 @@ export function StrengthAiScene({ mouse }: StrengthAiSceneProps) {
   const { ref, active } = useRenderActive<HTMLDivElement>();
 
   return (
-    <div ref={ref} className="absolute inset-0">
+    <div
+      ref={ref}
+      className="absolute inset-0"
+      style={{ visibility: active ? "visible" : "hidden" }}
+      aria-hidden={!active}
+    >
       <Canvas
         className="h-full w-full"
         camera={{ position: [0, 0.25, 5.2], fov: 48 }}
-        dpr={[1, 1.5]}
-        gl={{ antialias: true, alpha: true }}
+        dpr={[1, 1.25]}
+        gl={{ antialias: false, alpha: true, powerPreference: "high-performance" }}
         frameloop={active ? "always" : "never"}
         events={inertCanvasEvents}
         style={{ background: "transparent" }}

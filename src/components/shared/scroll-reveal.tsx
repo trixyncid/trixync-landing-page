@@ -37,13 +37,12 @@ export function ScrollReveal({
       className={className}
       initial={reduced ? false : { opacity: 0, x: offset.x, y: offset.y }}
       whileInView={reduced ? undefined : { opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, amount }}
+      viewport={{ once: true, amount, margin: "0px 0px -40px 0px" }}
       transition={{
-        duration: reduced ? 0 : 0.45,
+        duration: reduced ? 0 : 0.28,
         delay: reduced ? 0 : delay,
         ease: [0.22, 1, 0.36, 1],
       }}
-      style={reduced ? undefined : { willChange: "opacity" }}
     >
       {children}
     </motion.div>
@@ -60,7 +59,7 @@ type ScrollStaggerProps = {
 export function ScrollStagger({
   children,
   className,
-  stagger = 0.08,
+  stagger = 0.05,
   amount = 0.12,
 }: ScrollStaggerProps) {
   const reduced = useHydrationSafeReducedMotion();
@@ -70,7 +69,7 @@ export function ScrollStagger({
       className={className}
       initial={reduced ? false : "hidden"}
       whileInView={reduced ? undefined : "visible"}
-      viewport={{ once: true, amount }}
+      viewport={{ once: true, amount, margin: "0px 0px -40px 0px" }}
       variants={{
         hidden: {},
         visible: {
@@ -104,10 +103,9 @@ export function ScrollStaggerItem({
           opacity: 1,
           x: 0,
           y: 0,
-          transition: { duration: reduced ? 0 : 0.4, ease: [0.22, 1, 0.36, 1] },
+          transition: { duration: reduced ? 0 : 0.28, ease: [0.22, 1, 0.36, 1] },
         },
       }}
-      style={reduced ? undefined : { willChange: "opacity" }}
     >
       {children}
     </motion.div>
@@ -129,7 +127,7 @@ export function HeroReveal({ children, className, delay = 0 }: HeroRevealProps) 
       className={cn(className)}
       initial={reduced ? false : { opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: reduced ? 0 : 0.5, delay: reduced ? 0 : delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: reduced ? 0 : 0.35, delay: reduced ? 0 : delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </motion.div>
