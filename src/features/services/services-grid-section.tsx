@@ -1,10 +1,9 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
 import dynamic from "next/dynamic";
 import { Cpu, Layers, LayoutGrid, Shield, Workflow } from "lucide-react";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { AnimatePresence, motion } from "motion/react";
 import {
   processStepKeys,
@@ -18,7 +17,6 @@ import { PageHeader } from "@/components/shared/PageHeader";
 import { ScrollReveal } from "@/components/shared/scroll-reveal";
 import { SectionShell } from "@/components/shared/SectionShell";
 import { SectionSkeleton } from "@/components/shared/SectionSkeleton";
-import { type Locale } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { ServiceCard } from "./service-card";
 
@@ -48,8 +46,6 @@ function filterLabelKey(filter: ServiceFilterKey) {
 
 export function ServicesGridSection() {
   const t = useTranslations("services");
-  const locale = useLocale() as Locale;
-  const prefix = `/${locale}`;
 
   const [activeFilter, setActiveFilter] = useState<ServiceFilterKey>("all");
 
@@ -161,30 +157,6 @@ export function ServicesGridSection() {
         <ScrollReveal delay={0.08}>
           <div className="[&_.max-w-7xl]:!px-0 [&>div]:!bg-transparent">
             <Timeline data={timelineData} />
-          </div>
-        </ScrollReveal>
-      </SectionShell>
-
-      <div className="section-divider mx-auto max-w-4xl opacity-50" aria-hidden />
-
-      <SectionShell containerSize="narrow" className="pt-10 md:pt-12">
-        <ScrollReveal>
-          <div className="relative overflow-hidden rounded-3xl border border-brand/15 bg-gradient-to-br from-brand/[0.06] via-card/40 to-transparent px-6 py-8 text-center dark:from-brand/[0.1] md:px-10 md:py-10">
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
-              {t("cta.eyebrow")}
-            </p>
-            <p className="mt-3 font-heading text-xl font-semibold tracking-tight text-foreground md:text-2xl">
-              {t("cta.title")}
-            </p>
-            <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-muted-foreground md:text-base">
-              {t("cta.description")}
-            </p>
-            <Link
-              href={`${prefix}/contact`}
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-brand px-8 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand-light"
-            >
-              {t("cta.button")}
-            </Link>
           </div>
         </ScrollReveal>
       </SectionShell>

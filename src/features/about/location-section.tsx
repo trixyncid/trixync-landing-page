@@ -1,12 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { MapPin } from "lucide-react";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { siteConfig } from "@/content/site";
 import { ScrollReveal } from "@/components/shared/scroll-reveal";
 import { SectionShell } from "@/components/shared/SectionShell";
-import { type Locale } from "@/i18n/routing";
 import { motion } from "motion/react";
 
 const statKeys = ["homeBase", "nationwide", "remote"] as const;
@@ -19,9 +17,6 @@ const statLabels = {
 
 export function LocationSection() {
   const t = useTranslations("about.location");
-  const tNav = useTranslations("nav");
-  const locale = useLocale() as Locale;
-  const prefix = `/${locale}`;
 
   return (
     <>
@@ -75,28 +70,6 @@ export function LocationSection() {
             </p>
           </ScrollReveal>
         </div>
-      </SectionShell>
-
-      <SectionShell containerSize="narrow" className="pt-0">
-        <ScrollReveal>
-          <div className="relative overflow-hidden rounded-3xl border border-brand/15 bg-gradient-to-br from-brand/[0.06] via-card/40 to-transparent px-6 py-8 text-center dark:from-brand/[0.1] md:px-10 md:py-10">
-            <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
-              {t("cta.eyebrow")}
-            </p>
-            <p className="mt-3 font-heading text-xl font-semibold tracking-tight text-foreground md:text-2xl">
-              {t("cta.title")}
-            </p>
-            <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-muted-foreground md:text-base">
-              {t("cta.description")}
-            </p>
-            <Link
-              href={`${prefix}/contact`}
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-brand px-8 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-brand-light"
-            >
-              {tNav("cta")}
-            </Link>
-          </div>
-        </ScrollReveal>
       </SectionShell>
     </>
   );
