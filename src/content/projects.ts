@@ -16,7 +16,7 @@ export const projects: ProjectItem[] = [
     category: "software",
     image: "/projects/kms.png",
     tags: ["Django", "Flutter", "Mobile Apps"],
-    liveUrl: "https://kms-connect/download",
+    liveUrl: "https://kms-connect.com/download",
     featured: true,
   },
   {
@@ -24,7 +24,6 @@ export const projects: ProjectItem[] = [
     category: "enterprise",
     image: "/projects/gerindra.png",
     tags: ["Django", "Docker", "OCR"],
-    liveUrl: "https://system.gerindrasumut.id",
     featured: true,
   },
   {
@@ -32,7 +31,6 @@ export const projects: ProjectItem[] = [
     category: "enterprise",
     image: "/projects/ynb.png",
     tags: ["Django", "Scheduling", "Payroll"],
-    liveUrl: "https://system.yanksandbrits.co.id",
     featured: false,
   },
   {
